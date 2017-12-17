@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Sifonn';
+    src: url('../fonts/Sifonn-Basic.eot'), /* IE9 Compat Modes */
+    url('../fonts/Sifonn-Basic.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/Sifonn-Basic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Sifonn-Basic.svg') format('svg'); /* Legacy iOS */
+}
+
+body {
+    background-color: #f6f6f6;
+    color: #9d9d9d;
+    font-size: 14px;
+    font-family: 'Sifonn';
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+.header{
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    background: #ffffff;
+}
+
+#Logo {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+    z-index: 1;
+}
+
+#Logo a {
+    color: #9d9d9d;
+}
+
+#Logo a:hover {
+    text-decoration: none;
+}
+
+
+.Menu {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+
+
+
+/* slider */
+
+
+.slider img {
+    width: 100%;
+}
+
+/* .slider {
+    width: 100%;
+} */
+
+
+
+
+
+/* content */
+
+
+.content {
+    width: 97%;
+    margin: 0 auto;
+}
+
+
+#thumbView {
+    border:2px solid #9d9d9d;
+    padding-top: 20px;
+}
+
+#listView {
+    border:2px solid #9d9d9d;
+    padding-top: 20px;
+}
+
+
+#Work {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+#Work a {
+    color: #9d9d9d;
+}
+
+#Work a:hover {
+    text-decoration:none;
+}
+
+
+#listView {
+    display: none;
+}
+
+.remove {
+    float: right;
+    margin-top: 100px;
+    margin-right:50px;
+}
+
+.show {
+    float: right;
+    margin-top: 100px;
+    margin-right:5px;
+}
+
+.imageFade {
+    position: relative;
+}
+
+ .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+.overlay:hover {
+    opacity: 0.8;
+    transition: opacity 1s ease-in;
+}
