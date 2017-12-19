@@ -41,15 +41,42 @@
 
     // removePost
 
-    document.getElementById("removeListPostText").addEventListener("click", function () {
-        document.getElementById("listPostText").style.display = "none";
+    // document.getElementById("removeListPostText").addEventListener("click", function () {
+    //     document.getElementById("listPostText").style.display = "none";
+    // });
+
+    // document.getElementById("showListPostText").addEventListener("click", function () {
+    //     document.getElementById("listPostText").style.display = "block";
+    // });
+
+
+    document.querySelectorAll(".remove").forEach(function (item) {
+        item.addEventListener("click", function (event) {
+            var element = event.target;
+            var parent = element.parentElement;
+            var text = parent.children[1];
+            text.style.display = "none";
+        });
     });
 
-    document.getElementById("showListPostText").addEventListener("click", function () {
-        document.getElementById("listPostText").style.display = "block";
+
+
+    document.querySelectorAll(".show").forEach(function (item) {
+        item.addEventListener("click", function (event) {
+            var element = event.target;
+            var parent = element.parentElement;
+            var text = parent.children[1];
+            text.style.display = "block";
+        });
     });
 
+    document.querySelectorAll(".overlay .btn").forEach(function (item){
+        item.addEventListener("click", function (event){
+            var photo = event.target;
+            var parent = photo.parentElement.parentElement;
+
+        parent.parentNode.removeChild(parent);
+        });
+    });
 
 })();
-
-
