@@ -191,6 +191,26 @@ ul#services li{
     background: #e6e6e6;
 }
 
+.toggle {
+    cursor: pointer;
+}
+
+/* .expandable{
+    background: #ffffff;
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    opacity: 0;
+} */
+
+.expand {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    border: 1px solid #cccccc;
+}
 
 
 /* footer */
@@ -238,4 +258,17 @@ footer {
         width: 100%;
         margin-bottom: 5px;
     }
+}
+
+
+
+/* hovers */
+
+.hoverhtml, .hovercss, .hoverdesign {
+    transition: 1s linear;
+}
+
+
+.hoverhtml:hover, .hovercss:hover, .hoverdesign:hover {
+    transform: rotatey(180deg);
 }

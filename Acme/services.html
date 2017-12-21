@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Acme Web Design | Services</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/hover-min.css">
     <meta name="description" content="blaa blaaa">
     <meta name="keywords" content="saiti, site, acme, tutorial">
     <meta name="author" content="Giorgi Gurgenashvili">
@@ -22,13 +23,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html" class="hvr-underline-from-left">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.html" class="hvr-underline-from-left">About</a>
                     </li>
                     <li class="current">
-                        <a href="services.html">Services</a>
+                        <a href="services.html" class="hvr-underline-from-left">Services</a>
                     </li>
                 </ul>
             </nav>
@@ -51,22 +52,25 @@
                 <h1 class="page-title">Services</h1>
                 <ul id="services">
                     <li>
-                        <h3>Website Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mauris erat. Etiam nec justo libero.
-                            Curabitur pharetra suscipit diam ac finibus.</p>
-                        <p>Pricing:$1000 - $3000</p>
+                        <h3 class="toggle">Website Design</h3>
+                        <p class="expand">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mauris erat. Etiam nec justo libero.
+                            Curabitur pharetra suscipit diam ac finibus.
+                            <br> Pricing:$1000 - $3000</p>
+
                     </li>
                     <li>
-                        <h3>Website Maintenance</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mauris erat. Etiam nec justo libero.
-                            Curabitur pharetra suscipit diam ac finibus.</p>
-                        <p>Pricing:$250 per month</p>
+                        <h3 class="toggle">Website Maintenance</h3>
+                        <p class="expand">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mauris erat. Etiam nec justo libero.
+                            Curabitur pharetra suscipit diam ac finibus.
+                            <br> Pricing:$250 per month</p>
+
                     </li>
                     <li>
-                        <h3>Website Hosting</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mauris erat. Etiam nec justo libero.
-                            Curabitur pharetra suscipit diam ac finibus.</p>
-                        <p>Pricing:$25 per month</p>
+                        <h3 class="toggle">Website Hosting</h3>
+                        <p class="expand">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mauris erat. Etiam nec justo libero.
+                            Curabitur pharetra suscipit diam ac finibus.
+                            <br> Pricing:$25 per month</p>
+
                     </li>
                 </ul>
             </article>
@@ -100,6 +104,8 @@
     <footer>
         <p>Acme Web Design, &copy; 2017</p>
     </footer>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
