@@ -153,6 +153,7 @@ footer {
     height: 300px;
     background: url("../images/footer.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 footer p {

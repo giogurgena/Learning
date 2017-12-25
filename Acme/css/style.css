@@ -82,6 +82,7 @@ header nav {
 header .highlight, header .current a {
     color: #e8491d;
     font-weight: bold;
+    cursor: pointer;
 }
 
 header a:hover {
@@ -96,6 +97,7 @@ header a:hover {
 #showcase {
     min-height: 400px;
     background: url(../images/showcase.jpg) no-repeat 0 -400px;
+    background-position: center;
     text-align: center;
     color:#ffffff;
 }
