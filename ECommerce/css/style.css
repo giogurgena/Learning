@@ -30,3 +30,44 @@ body {
     margin:0 auto;
     width: 900px;
 }
+
+
+
+/* product */
+
+.container {
+    margin: 20px 0 20px 0;
+    background: #fff;
+}
+
+.block {
+    margin-top: 5px;
+    border: #5982da solid 1px;
+}
+
+
+
+.headline {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.row img{
+    max-height: 150px;
+}
+
+.read-more {
+    float: right;
+    margin-bottom: 5px;
+}
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 50px;
+    background: #5982da;
+    text-align: center;
+    padding: 15px;
+}
