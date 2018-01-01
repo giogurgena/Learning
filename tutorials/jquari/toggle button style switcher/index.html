@@ -19,14 +19,14 @@
 <script>
 
 (function() {
-	var link = $('link');
-	$('button').click(function() {
-		var $this = $(this),
-			stylesheet = $this.data('file');
-		link.attr('href', stylesheet + '.css');
+	var link = $('link');                               //links mivanichet link tagis gamodzaxeba
+	$('button').click(function() {                      //gamovidzaxet button da klikis dros asrulebs funqcias
+		var $this = $(this),                            //$this-s mivanichet buttonis gamodzaxebis funqcia
+			stylesheet = $this.data('file');            //stylesheets mivanichet data failis gamodzaxeba
+		link.attr('href', stylesheet + '.css');         //buttonis dacherisas link tags mivabit data failis saxeli .css gafartoebit
 		$this
-			.siblings('button')
-			.removeAttr('disabled');
+			.siblings('button')                         
+			.removeAttr('disabled');                    //rodesac daacher ert buttons gauqmdeba
 		$this.attr('disabled', 'disabled');
 	});
 })();
