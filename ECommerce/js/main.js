@@ -9,3 +9,14 @@ $(document).ready(function(){
     $('#inputPhone').mask('000-000-000');
 });
 
+(function(){
+    var a=1;
+    var $sup=$('sup');
+    $sup.hide();
+    $('.add-to-cart').on('click', function(){
+        
+    $sup.show();
+        
+    $sup.text(a++);
+    });
+})();
