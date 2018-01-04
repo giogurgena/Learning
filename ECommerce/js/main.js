@@ -40,6 +40,7 @@ $(document).ready(function () {
             a = 0;
         };
         $('sup').text(++a);
+        console.log(a);
     });
 })();
 
