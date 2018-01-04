@@ -19,8 +19,10 @@
                 <a href="#">ECommerce</a>
             </div>
 
-            <button type="button" class="btn btn-default btn-md cart-button">
-                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart
+            <button type="button" class="btn btn-default btn-md cart-button" class="btn btn-primary" data-toggle="modal" id="cartButton">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">
+                    <sup></sup>
+                </span> Cart
             </button>
         </div>
 
@@ -74,11 +76,11 @@
     <div class="container">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
-                    </button>
-                </span>
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
+                </button>
+            </span>
         </div>
         <div class="row products">
             <div class="col-sm-12 block">
@@ -93,8 +95,10 @@
                         standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
                         it to make a type specimen book. It has survived not only five centuries,
                     </p>
-                    <a href="./details.html">
-                        <button type="button" class="btn btn-primary read-more">Read More</button>
+                    <button type="button" data-id="1" class="btn btn-success add-to-cart">Add To Cart</button>
+
+                    <a href="./details.html" class="btn btn-primary read-more">
+                        Read More
                     </a>
                 </div>
             </div>
@@ -167,6 +171,37 @@
 
 
     <footer>&copy; Giorgi Gurgenashvili 2017</footer>
+
+
+
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Cart</h4>
+                </div>
+                <div class="modal-body" id="cartContent">
+
+                    <div>
+                        <img src="" alt="">
+                        <h1></h1>
+                        <button>erase</button>
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/main.js"></script>

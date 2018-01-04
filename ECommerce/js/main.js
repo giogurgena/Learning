@@ -32,6 +32,7 @@ $(document).ready(function () {
 //     });
 // })();
 
+var cartItems = [];
 
 (function () {
     $('.add-to-cart').on('click', function () {
@@ -40,8 +41,49 @@ $(document).ready(function () {
             a = 0;
         };
         $('sup').text(++a);
-        console.log(a);
+
+        var id = $(this).data("id");
+        addToCart(id, 'Acer i7 Ram-16gb', './img/computer-1.jpg');
+        console.log(cartItems);
     });
+
+    function addToCart(id, title, img) {
+        var item = {'id': id, 'title': title, 'imgUrl': img };
+        id++;
+        cartItems.push(item);
+    }
+
+
+    $('#cartButton').on('click', function(){
+        var cartContent = $('#cartContent');
+        cartContent.html('');
+        for (let i = 0; i < cartItems.length; i++) {
+            var div = document.createElement('div');
+            var img = document.createElement('img');
+            img.setAttribute('src', cartItems[i].imgUrl);
+            img.classList.add('imgClassName');
+            div.appendChild(img);
+
+            var title = document.createElement('h1');
+            title.innerText = cartItems[i].title;
+            div.appendChild(title);
+
+            var button = document.createElement('button');
+            button.setAttribute('data-id', cartItems[i].id);
+            button.innerText = 'Erase';
+            div.appendChild(button);
+
+            cartContent.append(div);
+
+
+            
+        }
+
+        
+
+        $('#cartModal').modal('show');
+    });
+
 })();
 
 // (function(){
@@ -52,3 +94,7 @@ $(document).ready(function () {
 //         console.log(a);
 //     });
 // })();
+
+
+
+

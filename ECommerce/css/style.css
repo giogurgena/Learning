@@ -112,3 +112,28 @@ footer {
     width: 600px;
     margin: 25px auto;
 }
+
+
+/* on cart */
+
+.cart-product{
+    margin: 50px auto;
+    display: none;
+}
+
+.cart-product img {
+    width: 150px;
+}
+
+.glyphicon-plus, .glyphicon-minus {
+    cursor: pointer;
+}
+
+.quantity {
+    float: right;
+    margin: 8px 50px 20px 0;
+}
+
+.checkout {
+    float: right;
+}
