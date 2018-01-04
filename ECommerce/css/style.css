@@ -22,7 +22,7 @@ body {
 .cart-button {
     float: right;
     color: #fff;
-    padding: 5px 50px 5px 0;
+    margin: 5px 50px 5px 0;
 }
 
 sup{
@@ -48,6 +48,12 @@ sup{
 
 
 /* product */
+
+
+.filter {
+    width: 100%;
+}
+
 
 .container {
     margin: 20px 0 20px 0;

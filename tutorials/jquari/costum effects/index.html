@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Click Me</h1>
+    <div class="content">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+            Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+            Ipsum.</p>
+    </div>
+    <script src="./jquery.min.js"></script>
+
+    <script>
+        (function () {
+            var content = $('div.content').hide();                            //vigebt divs, vinaxavt contentshi da vmalavt
+            jQuery.fn.flash = function (speed, easing, callback) {            //flesh metods vuwert funqcias
+                var $this = $(this);
+
+                return $this.slideDown(500, function () {
+                    $this.delay(2000).slideUp(500);
+                });                                                           //chamovwevt naxevar wamshi gavacherebt 2 wamit da avwevt naxevar wamshi
+            };
+
+            $('h1').on('click', function () {                                 //rodesac h1s davachert contents usrulebs flash funcias
+                content.flash();
+            });
+
+        })();
+
+    </script>
+</body>
+
+</html>
