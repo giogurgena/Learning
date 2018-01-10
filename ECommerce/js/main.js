@@ -36,50 +36,51 @@ var cartItems = [];
 
 (function () {
     $('.add-to-cart').on('click', function () {
-        var a = parseInt($('sup').text());
-        if (isNaN(a)) {
-            a = 0;
-        };
-        $('sup').text(++a);
+        
+        
 
         var id = $(this).data("id");
-        addToCart(id, 'Acer i7 Ram-16gb', './img/computer-1.jpg');
-        console.log(cartItems);
+        var parent = $(this).closest('.block');
+        var img = parent.find('.block-img').attr('src');
+        var title = parent.find('.headline').text();
+
+        addToCart(id, title, img);
+        $('sup').text(cartItems.length);
     });
 
     function addToCart(id, title, img) {
-        var item = {'id': id, 'title': title, 'imgUrl': img };
-        id++;
-        cartItems.push(item);
+        var isNew = true;
+        $.each(cartItems, function (index, obj) {
+            if (obj.id === id) {
+                obj.quantity +=1;
+                isNew = false;
+            }
+        });
+        if (isNew) {
+            var item = { 'id': id, 'title': title, 'imgUrl': img, 'quantity': 1 };
+            cartItems.push(item);
+        }
     }
 
 
-    $('#cartButton').on('click', function(){
+    $('#cartButton').on('click', function () {
         var cartContent = $('#cartContent');
         cartContent.html('');
-        for (let i = 0; i < cartItems.length; i++) {
-            var div = document.createElement('div');
-            var img = document.createElement('img');
-            img.setAttribute('src', cartItems[i].imgUrl);
-            img.classList.add('imgClassName');
-            div.appendChild(img);
+        var temp = $('#modalTemplate').html();
 
-            var title = document.createElement('h1');
-            title.innerText = cartItems[i].title;
-            div.appendChild(title);
+        $.each(cartItems, function (index, obj) {
+            var cart = temp
+                .replace(/{{image}}/ig, obj.imgUrl)
+                .replace(/{{title}}/ig, obj.title)
+                .replace(/{{id}}/ig, obj.id)
+                .replace(/{{quantity}}/ig, obj.quantity);
 
-            var button = document.createElement('button');
-            button.setAttribute('data-id', cartItems[i].id);
-            button.innerText = 'Erase';
-            div.appendChild(button);
-
-            cartContent.append(div);
+            cartContent.append(cart);
+        });
 
 
-            
-        }
 
-        
+
 
         $('#cartModal').modal('show');
     });
