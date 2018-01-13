@@ -78,7 +78,9 @@ var cartItems = [];
             cartContent.append(cart);
         });
 
-
+        $('.remove-item').on('click', function(){
+            $(this).parent().parent().remove();
+        });
 
 
 

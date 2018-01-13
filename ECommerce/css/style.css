@@ -137,3 +137,45 @@ footer {
 .checkout {
     float: right;
 }
+
+
+
+/* modal */
+
+
+.modal-content {
+    width: 800px !important;
+}
+
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #5982da;
+    margin: 3px;
+}
+
+
+
+.cart-image {
+    max-height: 160px;
+    max-width: 160px;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.cart-content {
+    width: 500px;
+    padding: 10px 0 0 100px;
+}
+
+.cart-content :first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.remove-item {
+    margin-top: 60px;
+    width: 100px;
+}
