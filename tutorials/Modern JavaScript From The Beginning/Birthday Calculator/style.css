@@ -1,0 +1,36 @@
+.container {
+    background: #f3f3f3;
+    width: 500px;
+    margin: 100px auto;
+    color: black;
+    padding-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+input {
+    width: 400px;
+    margin: 10px 50px;
+    height: 30px;
+}
+
+.btn {
+    background: red;
+    border: none;
+}
+
+#output {
+    background: white;
+    min-height: 30px;
+    width: 400px;
+    margin: 20px auto;
+}
+
+#text-output {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
