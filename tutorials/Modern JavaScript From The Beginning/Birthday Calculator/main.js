@@ -19,17 +19,21 @@
 
 document.getElementById('output').style.display = 'none';
 
+
 document.getElementById('age-calculator').addEventListener('submit', function(e) {
+    document.getElementById('text-output').innerHTML = '';
     const name = document.getElementById('input-name').value;
         date = document.getElementById('input-date').value;
         output = document.getElementById('text-output');
 
-        const brad = new Person(name, date);
+        
 
-        document.getElementById('output').style.display = 'block';
+            const brad = new Person(name, date);
 
-        output.appendChild(document.createTextNode(`${name} is ${brad.calculateAge()} age old `));
+            document.getElementById('output').style.display = 'block';
 
+            output.appendChild(document.createTextNode(`${name} is ${brad.calculateAge()} age old`));
+        
         e.preventDefault();
 })
 
