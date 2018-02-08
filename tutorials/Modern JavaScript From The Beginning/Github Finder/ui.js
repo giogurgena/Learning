@@ -3,6 +3,7 @@ class UI {
     this.profile = document.getElementById('profile');
   }
 
+  // Display profile in ui
   showProfile(user) {
     this.profile.innerHTML = `
       <div class="card card-body mb-3">
@@ -12,10 +13,10 @@ class UI {
             <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
           </div>
           <div class="col-md-9">
-            <span class="badge badge-primary">Public Repos: ${user.public_repos}</span>
-            <span class="badge badge-secondary">Public Gists: ${user.public_gists}</span>
-            <span class="badge badge-success">Followers: ${user.followers}</span>
-            <span class="badge badge-info">Following: ${user.following}</span>
+            <span class="badge badge-primary mt-1">Public Repos: ${user.public_repos}</span>
+            <span class="badge badge-secondary mt-1">Public Gists: ${user.public_gists}</span>
+            <span class="badge badge-success mt-1">Followers: ${user.followers}</span>
+            <span class="badge badge-info mt-1">Following: ${user.following}</span>
             <br><br>
             <ul class="list-group">
               <li class="list-group-item">Company: ${user.company}</li>
@@ -29,5 +30,66 @@ class UI {
       <h3 class="page-heading mb-3">Latest Repos</h3>
       <div id="repos"></div>
     `;
+  }
+
+  // Show user repos
+  showRepos(repos) {
+    let output = '';
+
+    repos.forEach(function (repo) {
+      output += `
+        <div class="card card-body mb-2">
+          <div class="row">
+            <div class="col-md-6">
+              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+            </div>
+            <div class="col-md-6">
+              <span class="badge badge-primary mt-1">Stars: ${repo.stargazers_count}</span>
+              <span class="badge badge-secondary mt-1">Watchers: ${repo.watchers}</span>
+              <span class="badge badge-success mt-1">Forks: ${repo.forms_count}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    // Output repos
+    document.getElementById('repos').innerHTML = output;
+  }
+
+  // Show alert message
+  showAlert(message, className) {
+    // Clear any remaining alerts
+    this.clearAlert();
+    // Create div
+    const div = document.createElement('div');
+    // Add classes
+    div.className = className;
+    // Add text
+    div.appendChild(document.createTextNode(message));
+    // Get parent
+    const container = document.querySelector('.searchContainer');
+    // Get search box
+    const search = document.querySelector('.search');
+    // Insert alert
+    container.insertBefore(div, search);
+
+    // Timeout after 3 sec
+    setTimeout(() => {
+      this.clearAlert();
+    }, 3000);
+  }
+
+  // Clear alert message
+  clearAlert() {
+    const currentAllert = document.querySelector('.alert');
+    if (currentAllert) {
+      currentAllert.remove();
+    }
+  }
+
+  // Clear profile
+  clearProfile() {
+    this.profile.innerHTML = '';
   }
 }
