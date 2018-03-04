@@ -10,6 +10,9 @@ document.getElementById('player1').addEventListener('submit', function(e) {
         }
     };
     player1.calculateAge();
+    player1.name = '';
+    player1.height = '';
+    player1.age = '';
         
     output.innerHTML += `${player1.name} score: ${player1.result} points;`;
 
@@ -28,6 +31,8 @@ document.getElementById('player2').addEventListener('submit', function(e) {
         }
     };
 
+    player2.calculateAge();
+
     output.innerHTML += `${player2.name} score: ${player2.result} points;`;
         
     e.preventDefault();
@@ -43,6 +48,8 @@ document.getElementById('player3').addEventListener('submit', function(e) {
             this.result = parseInt(this.height) + parseInt(this.age * 5);
         }
     };
+    
+    player3.calculateAge();
 
     output.innerHTML += `${player3.name} score: ${player3.result} points;`;
     
