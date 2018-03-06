@@ -1,0 +1,14 @@
+C:\Users\nickk\Documents\Visual Studio 2017\Projects\gio\Store\Store\bin\Debug\Store.exe.config
+C:\Users\nickk\Documents\Visual Studio 2017\Projects\gio\Store\Store\bin\Debug\Store.exe
+C:\Users\nickk\Documents\Visual Studio 2017\Projects\gio\Store\Store\bin\Debug\Store.pdb
+C:\Users\nickk\Documents\Visual Studio 2017\Projects\gio\Store\Store\obj\Debug\Store.csprojResolveAssemblyReference.cache
+C:\Users\nickk\Documents\Visual Studio 2017\Projects\gio\Store\Store\obj\Debug\Store.csproj.CoreCompileInputs.cache
+C:\Users\nickk\Documents\Visual Studio 2017\Projects\gio\Store\Store\obj\Debug\Store.exe
+C:\Users\nickk\Documents\Visual Studio 2017\Projects\gio\Store\Store\obj\Debug\Store.pdb
+D:\Web Design\Learning\C#\Store\Store\obj\Debug\Store.csprojResolveAssemblyReference.cache
+D:\Web Design\Learning\C#\Store\Store\obj\Debug\Store.csproj.CoreCompileInputs.cache
+D:\Web Design\Learning\C#\Store\Store\obj\Debug\Store.exe
+D:\Web Design\Learning\C#\Store\Store\obj\Debug\Store.pdb
+D:\Web Design\Learning\C#\Store\Store\bin\Debug\Store.exe.config
+D:\Web Design\Learning\C#\Store\Store\bin\Debug\Store.exe
+D:\Web Design\Learning\C#\Store\Store\bin\Debug\Store.pdb
