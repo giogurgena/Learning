@@ -1,6 +1,5 @@
 ﻿using Store.Models;
 using System;
-using System.Globalization;
 
 namespace Store
 {
@@ -12,15 +11,15 @@ namespace Store
             person.FirstName = "Gio";
             person.LastName = "Gurgenashvili";
             person.PersonalNumber = "45465464";
-            person.DateOfBirth = 07-12-1991;
-            Console.WriteLine(person.PersonalNumber);
+            person.DateOfBirth = "07-12-1991";
+            Console.WriteLine(person.DateOfBirth);
 
             Person client = new Person();
             client.FirstName = "Nika";
-            person.LastName = "Kvijinadze";
-            person.PersonalNumber = "49465432";
-            person.DateOfBirth = 06-03-1992;
-            Console.WriteLine(client.PersonalNumber);
+            client.LastName = "Kvijinadze";
+            client.PersonalNumber = "49465432";
+            client.DateOfBirth = "06-03-1992";
+            Console.WriteLine(client.DateOfBirth);
         }
 
     }
