@@ -1,0 +1,78 @@
+warning: LF will be replaced by CRLF in C#/Store/Store/Models/Person.cs.
+The file will have its original line endings in your working directory.
+[1mdiff --git a/C#/Store/.vs/Store/v15/Server/sqlite3/storage.ide b/C#/Store/.vs/Store/v15/Server/sqlite3/storage.ide[m
+[1mindex 253d015..551a46a 100644[m
+Binary files a/C#/Store/.vs/Store/v15/Server/sqlite3/storage.ide and b/C#/Store/.vs/Store/v15/Server/sqlite3/storage.ide differ
+[1mdiff --git a/C#/Store/Store/Models/Person.cs b/C#/Store/Store/Models/Person.cs[m
+[1mindex f9c95f5..63c5756 100644[m
+[1m--- a/C#/Store/Store/Models/Person.cs[m
+[1m+++ b/C#/Store/Store/Models/Person.cs[m
+[36m@@ -4,11 +4,17 @@[m [mnamespace Store.Models[m
+ {[m
+     public class Person[m
+     {[m
+[31m-        public string FirstName { get; set; }[m
+[31m-        public string LastName { get; set; }[m
+[31m-        public string PersonalNumber { get; set; }[m
+[31m-        public string DateOfBirth { get; set; }[m
+[31m-        //public static DateTime Now { get; }[m
+[31m-        //public double DateOfBirth { get; internal set; }[m
+[32m+[m[32m        public Person(string name, string lastName, string personalNumber, DateTime dateOfBirth)[m
+[32m+[m[32m        {[m
+[32m+[m[32m            FirstName = name;[m
+[32m+[m[32m            LastName = lastName;[m
+[32m+[m[32m            PersonalNumber = personalNumber;[m
+[32m+[m[32m            DateOfBirth = dateOfBirth;[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        public string FirstName;[m
+[32m+[m[32m        public string LastName;[m
+[32m+[m[32m        public string PersonalNumber;[m
+[32m+[m[32m        public DateTime DateOfBirth;[m
+     }[m
+ }[m
+[1mdiff --git a/C#/Store/Store/Program.cs b/C#/Store/Store/Program.cs[m
+[1mindex ce95a07..f7dc618 100644[m
+[1m--- a/C#/Store/Store/Program.cs[m
+[1m+++ b/C#/Store/Store/Program.cs[m
+[36m@@ -7,20 +7,27 @@[m [mnamespace Store[m
+     {[m
+         static void Main(string[] args)[m
+         {[m
+[31m-            Person person = new Person();[m
+[31m-            person.FirstName = "Gio";[m
+[31m-            person.LastName = "Gurgenashvili";[m
+[31m-            person.PersonalNumber = "45465464";[m
+[31m-            person.DateOfBirth = "07-12-1991";[m
+[31m-            Console.WriteLine(person.DateOfBirth);[m
+[32m+[m[32m            //Person person = new Person();[m
+[32m+[m[32m            //person.FirstName = "Gio";[m
+[32m+[m[32m            //person.LastName = "Gurgenashvili";[m
+[32m+[m[32m            //person.PersonalNumber = "45465464";[m
+[32m+[m[32m            //person.DateOfBirth = new DateTime(1991, 12, 07);[m
+[32m+[m[32m            //Console.WriteLine(person.DateOfBirth);[m
+ [m
+[31m-            Person client = new Person();[m
+[31m-            client.FirstName = "Nika";[m
+[31m-            client.LastName = "Kvijinadze";[m
+[31m-            client.PersonalNumber = "49465432";[m
+[31m-            client.DateOfBirth = "06-03-1992";[m
+[31m-            Console.WriteLine(client.DateOfBirth);[m
+[31m-        }[m
+[32m+[m[32m            //Person client = new Person();[m
+[32m+[m[32m            //client.FirstName = "Nika";[m
+[32m+[m[32m            //client.LastName = "Kvijinadze";[m
+[32m+[m[32m            //client.PersonalNumber = "49465432";[m
+[32m+[m[32m            //client.DateOfBirth = new DateTime(1992, 03, 06);[m
+[32m+[m[32m            //Console.WriteLine(client.DateOfBirth);[m
+[32m+[m
+[32m+[m[32m            Person person = new Person("Gio", "Gurgenashvili", "45465464", new DateTime(1991, 12, 07));[m
+[32m+[m[32m            Person client = new Person("Nika", "Kvijinadze", "49465432", new DateTime(1992, 03, 06));[m
+ [m
+[32m+[m[32m            if(person.LastName == "Gurgenashvili")[m
+[32m+[m[32m            {[m
+[32m+[m[32m                Console.WriteLine(person.FirstName);[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m
+     }[m
+ }[m

@@ -4,11 +4,17 @@ namespace Store.Models
 {
     public class Person
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string PersonalNumber { get; set; }
-        public string DateOfBirth { get; set; }
-        //public static DateTime Now { get; }
-        //public double DateOfBirth { get; internal set; }
+        public Person(string name, string lastName, string personalNumber, DateTime dateOfBirth)
+        {
+            FirstName = name;
+            LastName = lastName;
+            PersonalNumber = personalNumber;
+            DateOfBirth = dateOfBirth;
+        }
+
+        public string FirstName;
+        public string LastName;
+        public string PersonalNumber;
+        public DateTime DateOfBirth;
     }
 }
