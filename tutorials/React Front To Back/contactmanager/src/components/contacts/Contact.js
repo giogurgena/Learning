@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Consumer } from '../context';
+import { Consumer } from '../../context';
 
 class Contact extends Component {
   state = {
@@ -8,7 +8,7 @@ class Contact extends Component {
   };
 
   onDeleteClick = (id, dispatch) => {
-    dispatch({type: 'DELETE_CONTACT', payload: id});
+    dispatch({ type: 'DELETE_CONTACT', payload: id });
   };
 
   render() {
@@ -25,7 +25,9 @@ class Contact extends Component {
                 {name}{' '}
                 <i
                   onClick={() =>
-                    this.setState({ showContactinfo: !this.state.showContactinfo })
+                    this.setState({
+                      showContactinfo: !this.state.showContactinfo
+                    })
                   }
                   className="fas fa-sort-down"
                   style={{ cursor: 'pointer' }}
@@ -43,10 +45,9 @@ class Contact extends Component {
                 </ul>
               ) : null}
             </div>
-          )
+          );
         }}
       </Consumer>
-
     );
   }
 }
