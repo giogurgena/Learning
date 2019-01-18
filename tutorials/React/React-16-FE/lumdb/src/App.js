@@ -3,24 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  state = {
-    toggle: true
-  };
-
-  toggle = () => {
-    this.setState({
-      toggle: !this.state.toggle
-    });
+  submit = () => {
+    console.log(this.text.value);
   };
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <button onClick={this.toggle}>showhide</button>
-          {this.state.toggle && (
-            <img src={logo} className="App-logo" alt="logo" />
-          )}
+          <input type="text" ref={input => (this.text = input)} />
+          <button onClick={this.submit}>showvalue</button>
+          <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
