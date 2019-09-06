@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-
   render() {
     return (
       <div className="row">
@@ -22,7 +21,12 @@ class Counter extends Component {
           >
             -
           </button>
-          <button onClick={() => this.props.onDelete(this.props.counter.id)} className="btn btn-danger btn-sm">X</button>
+          <button
+            onClick={() => this.props.onDelete(this.props.counter.id)}
+            className="btn btn-danger btn-sm"
+          >
+            X
+          </button>
         </div>
       </div>
     );
