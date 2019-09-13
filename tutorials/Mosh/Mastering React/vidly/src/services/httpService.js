@@ -9,16 +9,21 @@ axios.interceptors.response.use(null, error => {
     error.response.status < 500;
 
   if (!expectedError) {
-    console.log('logging the error', error);
-    toast.error('unexpected error occured');
+    logger.log(error);
+    toast.error('An unexpected error occured');
   }
 
   return Promise.reject(error);
 });
 
+function setJwt(jwt) {
+  axios.defaults.headers.common['x-auth-token'] = jwt;
+}
+
 export default {
   get: axios.get,
   post: axios.post,
   put: axios.put,
-  delete: axios.delete
+  delete: axios.delete,
+  setJwt
 };
