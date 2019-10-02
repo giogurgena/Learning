@@ -1,0 +1,30 @@
+.balance-container {
+  padding: 20px 0;
+  .balance {
+    padding: 5px;
+    width: 250px;
+    border-radius: 10px;
+    background: $color-secondary;
+    color: $color-white;
+
+    &__icon {
+      i {
+        font-size: 30px;
+      }
+    }
+
+    &__content {
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    &__text {
+      font-size: 13px;
+    }
+    &__amount {
+      font-weight: bolder;
+      transform: translateY(-5px);
+    }
+  }
+}
