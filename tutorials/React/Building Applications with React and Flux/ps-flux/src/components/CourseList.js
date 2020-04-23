@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function CourseList({ courses }) {
+function CourseList({ courses, deleteCourse }) {
   return (
     <table className="table">
       <thead>
         <tr>
+          <th>&nbsp;</th>
           <th>Title</th>
           <th>Author ID</th>
           <th>Category</th>
@@ -16,6 +17,14 @@ function CourseList({ courses }) {
         {courses.map((course) => {
           return (
             <tr key={course.id}>
+              <td>
+                <button
+                  className="btn btn-outline-danger"
+                  onClick={() => deleteCourse(course.id)}
+                >
+                  Delete
+                </button>
+              </td>
               <td>
                 <Link to={'/course/' + course.slug}>{course.title}</Link>
               </td>
@@ -30,6 +39,7 @@ function CourseList({ courses }) {
 }
 
 CourseList.propTypes = {
+  deleteCourse: PropTypes.func.isRequired,
   courses: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
